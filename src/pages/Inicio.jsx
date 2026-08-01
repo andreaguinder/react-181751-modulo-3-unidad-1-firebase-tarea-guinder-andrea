@@ -16,7 +16,6 @@ const Inicio = () => {
       try {
         const productosRef = collection(db, 'productos');
 
-        // Filtramos por la categoría "women's clothing"
         const q = query(productosRef, where("category", "==", "women's clothing"));
         const querySnapshot = await getDocs(q);
 
